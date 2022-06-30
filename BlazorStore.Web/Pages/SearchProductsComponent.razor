@@ -7,12 +7,39 @@
 
 <SearchBarComponent OnSearch="HandleSearch"></SearchBarComponent>
 
+<br />
+<table>
+    <thead>
+        <tr>
+            <th>@nameof(Product.Name)</th>
+            <th>@nameof(Product.Brand)</th>
+            <th>@nameof(Product.Price)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in products)
+        {
+            @if(product != null)
+            {
+                <ProductItemComponent Product="product"></ProductItemComponent>
+            }
+            else
+            {
+                <tr>
+                    <td colspan="3">
+                        Cannot find the products
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
 <ul>
     @foreach (var prod in products)
     {
         <li>@prod.Name</li>
     }
-    
+
 </ul>
 
 @code {
@@ -27,7 +54,7 @@
 
     private void HandleSearch(string filter)
     {
-        
+
     }
 
 }
