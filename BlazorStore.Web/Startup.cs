@@ -10,6 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using BlazorStore.Web.Data;
+using BlazorStore.UseCases.PluginsInterfaces.DataStore;
+using BlazorStore.DataStore.HardCoded;
+using BlazorStore.UseCases.SearchProductScreen;
 
 namespace BlazorStore.Web
 {
@@ -29,6 +32,10 @@ namespace BlazorStore.Web
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
+
+            services.AddTransient<IProductRepository, ProductRepository>();
+            services.AddTransient<ISearchProduct, SearchProduct>();
+            services.AddTransient<IViewProduct, ViewProduct>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

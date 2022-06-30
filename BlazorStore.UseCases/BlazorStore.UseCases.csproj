@@ -8,4 +8,8 @@
     <ProjectReference Include="..\BlazorStore.CoreBusiness\BlazorStore.CoreBusiness.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ViewProductScreen\" />
+  </ItemGroup>
+
 </Project>

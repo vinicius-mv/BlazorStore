@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorStore.CoreBusiness", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorStore.UseCases", "BlazorStore.UseCases\BlazorStore.UseCases.csproj", "{B377DC77-94A1-4662-AA7C-30D6AE3B3844}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorStore.DataStore.HardCoded", "BlazorStore.DataStore.HardCoded\BlazorStore.DataStore.HardCoded.csproj", "{59A5E91B-D1A6-42A3-90FA-B99BC7E1A833}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorStore.DataStore.HardCoded", "BlazorStore.DataStore.HardCoded\BlazorStore.DataStore.HardCoded.csproj", "{59A5E91B-D1A6-42A3-90FA-B99BC7E1A833}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

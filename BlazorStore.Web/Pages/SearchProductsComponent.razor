@@ -1,0 +1,16 @@
+﻿@page "/products"
+
+@inject ISearchProduct searchProduct;
+
+<h3>Search Products Component</h3>
+
+@code {
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        var products = searchProduct.Execute();
+    }
+
+}

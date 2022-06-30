@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BlazorStore.CoreBusiness\BlazorStore.CoreBusiness.csproj" />
+    <ProjectReference Include="..\BlazorStore.DataStore.HardCoded\BlazorStore.DataStore.HardCoded.csproj" />
+    <ProjectReference Include="..\BlazorStore.UseCases\BlazorStore.UseCases.csproj" />
+  </ItemGroup>
+
 </Project>

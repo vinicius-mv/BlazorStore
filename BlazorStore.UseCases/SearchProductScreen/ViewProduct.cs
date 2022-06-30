@@ -2,9 +2,9 @@
 using BlazorStore.UseCases.PluginsInterfaces.DataStore;
 using System;
 
-namespace BlazorStore.UseCases.ViewProductsScreen
+namespace BlazorStore.UseCases.SearchProductScreen
 {
-    public class ViewProduct
+    public class ViewProduct : IViewProduct
     {
         private readonly IProductRepository productRepository;
 
