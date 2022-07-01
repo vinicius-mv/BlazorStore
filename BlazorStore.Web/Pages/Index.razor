@@ -4,4 +4,42 @@
 
 Welcome to your new app.
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+Product Name: @product.Name
+<br />
+<input type="text" @bind-value="product.Name" @bind-value:event="oninput" />
+<br />
+<br />
+<label>
+    <input type="checkbox" @bind-value="isActive" />
+    &nbsp;Is Active
+</label>
+<br />
+@isActive
+<br />
+<p>
+    <label>
+        <input type="radio"
+               value="1"
+               name="group"
+               @onclick="@(() => selectedGroup = 1)" />
+        1
+    </label>
+    <label>
+        <input type="radio"
+               value="2"
+               name="group" 
+               @onclick="@(() => selectedGroup = 2)" />
+        2
+    </label>
+    <br />
+    @selectedGroup
+</p>
+
+
+@code {
+    private int selectedGroup = 0;
+
+    private bool isActive = false;
+
+    private Product product = new Product { Id = 495, Brand = "maybelline", Name = "Maybelline Face Studio Master Hi-Light Light Booster Bronzer", Price = 14.99, ImageLink = "https://d3t32hsnjxo7q6.cloudfront.net/i/991799d3e70b8856686979f8ff6dcfe0_ra,w158,h184_pa,w158,h184.png", Description = "Maybelline Face Studio Master Hi-Light Light Boosting bronzer formula has an expert  balance of shade + shimmer illuminator for natural glow. Skin goes  soft-lit with zero glitz.    For Best Results: Brush over all shades in palette and gently sweep over  cheekbones, brow bones, and temples, or anywhere light naturally touches  the face." };
+}
