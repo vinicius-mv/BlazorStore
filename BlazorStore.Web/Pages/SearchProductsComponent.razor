@@ -17,30 +17,23 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var product in products)
+        @if (products != null && products.Count() > 0)
         {
-            @if(product != null)
+            @foreach (var product in products)
             {
                 <ProductItemComponent Product="product"></ProductItemComponent>
             }
-            else
-            {
-                <tr>
-                    <td colspan="3">
-                        Cannot find the products
-                    </td>
-                </tr>
-            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="3">
+                    Cannot find the products
+                </td>
+            </tr>
         }
     </tbody>
 </table>
-<ul>
-    @foreach (var prod in products)
-    {
-        <li>@prod.Name</li>
-    }
-
-</ul>
 
 @code {
     private IEnumerable<Product> products;
@@ -54,7 +47,7 @@
 
     private void HandleSearch(string filter)
     {
-
+        products = searchProduct.Execute(filter);
     }
 
 }
