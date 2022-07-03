@@ -51,7 +51,26 @@ Product Name: @product.Name
 <VisibilityComponent @ref="visibilityComponent"></VisibilityComponent>
 <br />
 <button @onclick="Toggle">Toggle Visibility</button>
+<br />
+<br />
 
+<TemplatedComponent Items="products" TItem="Product">
+    <Header>
+        <p>Welcome to Blazor Course</p>
+    </Header>
+
+    <ReapeaterItem Context="item">
+        <p>Name: @item.Name</p>
+        <p>Brand: @item.Brand</p>
+        <p>Description: @item.Description</p>
+    </ReapeaterItem>
+
+    <Footer>
+        <div style="font-size: 10px">
+            Feel free to leave a comment.
+        </div>
+    </Footer>
+</TemplatedComponent>
 
 @code {
     private VisibilityComponent visibilityComponent;
@@ -75,7 +94,5 @@ Product Name: @product.Name
     private void Toggle()
     {
         visibilityComponent.ToggleVisibility();
-
-
     }
 }
