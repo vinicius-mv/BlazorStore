@@ -2,7 +2,7 @@
 using BlazorStore.UseCases.PluginsInterfaces.DataStore;
 using System;
 
-namespace BlazorStore.UseCases.SearchProductScreen
+namespace BlazorStore.UseCases.ViewProductScreen
 {
     public class ViewProduct : IViewProduct
     {

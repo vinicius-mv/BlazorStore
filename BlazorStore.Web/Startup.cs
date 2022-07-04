@@ -13,6 +13,7 @@ using BlazorStore.Web.Data;
 using BlazorStore.UseCases.PluginsInterfaces.DataStore;
 using BlazorStore.DataStore.HardCoded;
 using BlazorStore.UseCases.SearchProductScreen;
+using BlazorStore.UseCases.ViewProductScreen;
 
 namespace BlazorStore.Web
 {
@@ -33,7 +34,8 @@ namespace BlazorStore.Web
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
 
-            services.AddTransient<IProductRepository, ProductRepository>();
+            services.AddSingleton<IProductRepository, ProductRepository>();
+
             services.AddTransient<ISearchProduct, SearchProduct>();
             services.AddTransient<IViewProduct, ViewProduct>();
         }
