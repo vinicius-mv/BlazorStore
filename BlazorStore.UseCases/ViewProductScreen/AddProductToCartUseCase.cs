@@ -21,7 +21,7 @@ namespace BlazorStore.UseCases.ViewProductScreen
         public async void Execute(int productId)
         {
             var product = productRepository.GetProduct(productId);
-            await shoppingCart.AddProductÁsync(product);
+            await shoppingCart.AddProductAsync(product);
         }
     }
 }

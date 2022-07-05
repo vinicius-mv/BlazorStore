@@ -10,6 +10,7 @@
     <ProjectReference Include="..\BlazorStore.Web.Modules\BlazorStore.Web.Common\BlazorStore.Web.Common.csproj" />
     <ProjectReference Include="..\BlazorStore.Web.Modules\BlazorStore.Web.CustomerPortal\BlazorStore.Web.CustomerPortal.csproj" />
     <ProjectReference Include="..\Plugins\BlazorStore.DataStore.HardCoded\BlazorStore.DataStore.HardCoded.csproj" />
+    <ProjectReference Include="..\Plugins\BlazorStore.ShoppingCart.LocalStorage\BlazorStore.ShoppingCart.LocalStorage.csproj" />
   </ItemGroup>
 
 </Project>

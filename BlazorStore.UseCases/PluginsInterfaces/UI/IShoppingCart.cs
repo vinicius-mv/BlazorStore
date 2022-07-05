@@ -10,7 +10,7 @@ namespace BlazorStore.UseCases.PluginsInterfaces.UI
     {
         Task<Order> GetOrderAsync();
 
-        Task<Order> AddProductÁsync(Product product);
+        Task<Order> AddProductAsync(Product product);
 
         Task<Order> UpdateQuantityAsync(int productId, int quantity);
 
