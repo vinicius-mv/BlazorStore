@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace BlazorStore.UseCases.SearchProductScreen
 {
-    public interface ISearchProduct
+    public interface ISearchProductUseCase
     {
         IEnumerable<Product> Execute(string filter = null);
     }

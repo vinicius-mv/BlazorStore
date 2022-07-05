@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlazorStore.UseCases.PluginsInterfaces.UI
 {
-    internal interface IShoppingCart
+    public interface IShoppingCart
     {
         Task<Order> GetOrderAsync();
 

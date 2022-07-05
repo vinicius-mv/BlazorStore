@@ -36,8 +36,8 @@ namespace BlazorStore.Web
 
             services.AddSingleton<IProductRepository, ProductRepository>();
 
-            services.AddTransient<ISearchProduct, SearchProduct>();
-            services.AddTransient<IViewProduct, ViewProduct>();
+            services.AddTransient<ISearchProductUseCase, SearchProductUseCase>();
+            services.AddTransient<IViewProductUseCase, ViewProductUseCase>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
