@@ -1,0 +1,36 @@
+﻿@if (LineItem != null && LineItem.Product != null)
+{
+    <li class="row">
+        <div class="col">
+            <img src="@LineItem.Product.ImageLink" />
+        </div>
+        <div class="col">
+            <h5>@LineItem.Product.Name</h5>
+            <div>
+                Quantity:&nbsp;&nbsp;
+                <input type="number" min="0" value="@LineItem.Quantity" @onchange="HandleQuantityChange"></input>
+            </div>
+            <div>
+                Price:&nbsp;&nbsp;@LineItem.Product.Price.ToString("C")
+            </div>
+        </div>
+        <div class="col">
+            <button class="btn btn-light" @onclick="@(() => DeleteProduct(LineItem.ProductId))"></button>
+        </div>
+    </li>
+}
+
+@code {
+    [Parameter]
+    public OrderLineItem LineItem { get; set; }
+
+    private void HandleQuantityChange()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void DeleteProduct(int productId)
+    {
+        throw new NotImplementedException();
+    }
+}
