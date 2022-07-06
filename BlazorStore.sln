@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorStore.DataStore.HardC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorStore.Web.AdminPortal", "BlazorStore.Web.Modules\BlazorStore.Web.AdminPortal\BlazorStore.Web.AdminPortal.csproj", "{26AA3890-9857-4A4D-9855-AC0C3DDE5E08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorStore.ShoppingCart.LocalStorage", "Plugins\BlazorStore.ShoppingCart.LocalStorage\BlazorStore.ShoppingCart.LocalStorage.csproj", "{73229092-9639-4D54-BDDD-648F974BE9FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorStore.ShoppingCart.LocalStorage", "Plugins\BlazorStore.ShoppingCart.LocalStorage\BlazorStore.ShoppingCart.LocalStorage.csproj", "{73229092-9639-4D54-BDDD-648F974BE9FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
