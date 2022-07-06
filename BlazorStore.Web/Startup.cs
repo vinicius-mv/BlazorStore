@@ -42,6 +42,7 @@ namespace BlazorStore.Web
             services.AddTransient<ISearchProductUseCase, SearchProductUseCase>();
             services.AddTransient<IViewProductUseCase, ViewProductUseCase>();
             services.AddTransient<IAddProductToCartUseCase, AddProductToCartUseCase>();
+            services.AddTransient<IShoppingCartUseCase, ShoppingCartUseCase>();
 
         }
 

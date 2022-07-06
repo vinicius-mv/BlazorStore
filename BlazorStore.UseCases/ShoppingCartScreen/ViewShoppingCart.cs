@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BlazorStore.UseCases.ShoppingCartScreen
 {
-    public class ViewShoppingCartUseCase
+    public class ViewShoppingCartUseCase : IViewShoppingCartUseCase
     {
         private readonly IShoppingCart shoppingCart;
 
