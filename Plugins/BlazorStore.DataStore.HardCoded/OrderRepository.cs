@@ -19,33 +19,32 @@ namespace BlazorStore.DataStore.HardCoded
         public int CreateOrder(Order order)
         {
             order.OrderId = this.orders.Count + 1;
-            order.UniqueId = Guid.NewGuid().ToString();
             this.orders.Add(order.OrderId.Value, order);
 
             return order.OrderId.Value;
         }
         public IEnumerable<Order> GetOrders()
         {
-            return orders.Values;
+            return this.orders.Values;
         }
 
         public IEnumerable<Order> GetOutstandingOrders()
         {
-            var allOrders = (IEnumerable<Order>)orders.Values;
+            var allOrders = (IEnumerable<Order>)this.orders.Values;
 
             return allOrders.Where(x => x.DateProcessed.HasValue == false);
         }
 
         public IEnumerable<Order> GetProcessedOrders()
         {
-            var allOrders = (IEnumerable<Order>)orders.Values;
+            var allOrders = (IEnumerable<Order>)this.orders.Values;
 
             return allOrders.Where(x => x.DateProcessed.HasValue);
         }
 
         public Order GetOrder(int id)
         {
-            return orders[id];
+            return this.orders[id];
         }
 
         public Order GetOrderByUniqueId(string uniqueId)
