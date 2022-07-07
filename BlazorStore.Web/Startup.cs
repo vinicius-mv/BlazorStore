@@ -15,6 +15,7 @@ using BlazorStore.DataStore.HardCoded;
 using BlazorStore.UseCases.SearchProductScreen;
 using BlazorStore.UseCases.ViewProductScreen;
 using BlazorStore.UseCases.PluginsInterfaces.UI;
+using BlazorStore.UseCases.ShoppingCartScreen;
 
 namespace BlazorStore.Web
 {
@@ -42,7 +43,7 @@ namespace BlazorStore.Web
             services.AddTransient<ISearchProductUseCase, SearchProductUseCase>();
             services.AddTransient<IViewProductUseCase, ViewProductUseCase>();
             services.AddTransient<IAddProductToCartUseCase, AddProductToCartUseCase>();
-            services.AddTransient<IShoppingCartUseCase, ShoppingCartUseCase>();
+            services.AddTransient<IViewShoppingCartUseCase, ViewShoppingCartUseCase>();
 
         }
 
