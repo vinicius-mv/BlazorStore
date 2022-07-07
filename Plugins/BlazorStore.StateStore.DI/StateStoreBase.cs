@@ -5,16 +5,12 @@ namespace BlazorStore.StateStore.DI
 {
     public class StateStoreBase : IStateStore
     {
-        protected Action listeners; 
+        protected Action Listeners; 
 
-        public void AddStateChangeListener(Action listener) => this.listeners += listener;
+        public void AddStateChangeListener(Action listener) => this.Listeners += listener;
         
-        public void RemoveStateChangeListener(Action listener) => this.listeners -= listener;
+        public void RemoveStateChangeListener(Action listener) => this.Listeners -= listener;
 
-
-        public void BrodcastStateChange()
-        {
-            this.listeners?.Invoke();
-        }
+        public void BrodcastStateChange() => this.Listeners?.Invoke();        
     }
 }
