@@ -11,6 +11,7 @@
     <ProjectReference Include="..\BlazorStore.Web.Modules\BlazorStore.Web.CustomerPortal\BlazorStore.Web.CustomerPortal.csproj" />
     <ProjectReference Include="..\Plugins\BlazorStore.DataStore.HardCoded\BlazorStore.DataStore.HardCoded.csproj" />
     <ProjectReference Include="..\Plugins\BlazorStore.ShoppingCart.LocalStorage\BlazorStore.ShoppingCart.LocalStorage.csproj" />
+    <ProjectReference Include="..\Plugins\BlazorStore.StateStore.DI\BlazorStore.StateStore.DI.csproj" />
   </ItemGroup>
 
 </Project>

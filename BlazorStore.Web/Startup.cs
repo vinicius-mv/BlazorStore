@@ -16,6 +16,8 @@ using BlazorStore.UseCases.SearchProductScreen;
 using BlazorStore.UseCases.ViewProductScreen;
 using BlazorStore.UseCases.PluginsInterfaces.UI;
 using BlazorStore.UseCases.ShoppingCartScreen;
+using BlazorStore.UseCases.PluginsInterfaces.StateStore;
+using BlazorStore.StateStore.DI;
 
 namespace BlazorStore.Web
 {
@@ -39,12 +41,12 @@ namespace BlazorStore.Web
             services.AddSingleton<IProductRepository, ProductRepository>();
 
             services.AddScoped<IShoppingCart, ShoppingCart.LocalStorage.ShoppingCart>();
+            services.AddScoped<IShoppingCartStateStore, ShoppingCartStateStore>();
 
             services.AddTransient<ISearchProductUseCase, SearchProductUseCase>();
             services.AddTransient<IViewProductUseCase, ViewProductUseCase>();
             services.AddTransient<IAddProductToCartUseCase, AddProductToCartUseCase>();
             services.AddTransient<IViewShoppingCartUseCase, ViewShoppingCartUseCase>();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
