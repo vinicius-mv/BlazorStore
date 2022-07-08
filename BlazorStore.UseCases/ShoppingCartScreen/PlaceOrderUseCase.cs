@@ -21,11 +21,13 @@ namespace BlazorStore.UseCases.ShoppingCartScreen
 
         private readonly IShoppingCartStateStore shoppingCartStateStore;
 
-        public PlaceOrderUseCase(IOrderService orderService, IOrderRepository orderRepository, IShoppingCart shoppingCart)
+        public PlaceOrderUseCase(IOrderService orderService, IOrderRepository orderRepository, IShoppingCart shoppingCart, IShoppingCartStateStore shoppingCartStateStore)
         {
             this.orderService = orderService;
             this.orderRepository = orderRepository;
             this.shoppingCart = shoppingCart;
+            this.shoppingCartStateStore = shoppingCartStateStore;
+
         }
 
         public async Task<string> ExecuteAsync(Order order)

@@ -16,7 +16,7 @@ namespace BlazorStore.UseCases.ShoppingCartScreen
             this.shoppingCart = shoppingCart;
         }
 
-        public Task<Order> Execute()
+        public Task<Order> ExecuteAsync()
         {
             return shoppingCart.GetOrderAsync();
         }

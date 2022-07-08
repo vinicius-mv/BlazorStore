@@ -5,6 +5,6 @@ namespace BlazorStore.UseCases.ShoppingCartScreen
 {
     public interface IViewShoppingCartUseCase
     {
-        Task<Order> Execute();
+        Task<Order> ExecuteAsync();
     }
 }

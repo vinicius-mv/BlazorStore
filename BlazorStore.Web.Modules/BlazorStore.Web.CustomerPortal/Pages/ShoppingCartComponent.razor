@@ -40,7 +40,7 @@
     {
         if (firstRender)
         {
-            order = await viewShoppingCartUseCase.Execute();
+            order = await viewShoppingCartUseCase.ExecuteAsync();
 
             StateHasChanged();
         }

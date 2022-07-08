@@ -1,0 +1,65 @@
+﻿@page "/placeorder"
+
+@inject NavigationManager navigationManager
+
+@inject IViewShoppingCartUseCase viewShoppingCartUseCase
+@inject IPlaceOrderUseCase placeOrderUseCase
+
+<h3>Placing Order</h3>
+<br />
+
+@if (order != null)
+{
+    <div class="row">
+        <div class="col-6">
+            <CustomerFormComponent OnCustomerInfoSubmitted="HandleCustomerInfoSubmitted"></CustomerFormComponent>
+        </div>
+        <div class="col-6">
+            <OrderSummaryComponent Order="order" HidePlaceOrder="true"></OrderSummaryComponent>
+        </div>
+    </div>
+}
+
+@if (errorMessage.Length > 0)
+{
+    <div class="row m-2">
+        <p class="text-dange">
+            @errorMessage
+        </p>
+    </div>
+}
+
+@code {
+    private string errorMessage = string.Empty;
+
+    private Order order;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            order = await viewShoppingCartUseCase.ExecuteAsync();
+            base.StateHasChanged();
+        }
+    }
+
+    private async void HandleCustomerInfoSubmitted(CustomerViewModel customerVM)
+    {
+        errorMessage = string.Empty;
+
+        var mapper = new AutoMapper.MapperConfiguration(cfg => cfg.CreateMap<CustomerViewModel, Order>()).CreateMapper();
+        mapper.Map<CustomerViewModel, Order>(customerVM, order);
+
+        var orderUniqueId = await placeOrderUseCase.ExecuteAsync(order);
+
+        if (string.IsNullOrEmpty(orderUniqueId))
+        {
+            errorMessage = "Sorry, somehting went wrong.";
+            base.StateHasChanged();
+        }
+        else
+        {   
+            navigationManager.NavigateTo($"/orderconfirm/{orderUniqueId}");
+        }
+    }
+}

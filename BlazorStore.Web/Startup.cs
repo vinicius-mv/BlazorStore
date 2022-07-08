@@ -18,6 +18,8 @@ using BlazorStore.UseCases.PluginsInterfaces.UI;
 using BlazorStore.UseCases.ShoppingCartScreen;
 using BlazorStore.UseCases.PluginsInterfaces.StateStore;
 using BlazorStore.StateStore.DI;
+using BlazorStore.CoreBusiness.Services.Interfaces;
+using BlazorStore.CoreBusiness.Services;
 
 namespace BlazorStore.Web
 {
@@ -38,10 +40,14 @@ namespace BlazorStore.Web
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
 
+            // in-mem database (singleton)
             services.AddSingleton<IProductRepository, ProductRepository>();
+            services.AddSingleton<IOrderRepository, OrderRepository>();
 
             services.AddScoped<IShoppingCart, ShoppingCart.LocalStorage.ShoppingCart>();
             services.AddScoped<IShoppingCartStateStore, ShoppingCartStateStore>();
+
+            services.AddTransient<IOrderService, OrderService>();
 
             services.AddTransient<ISearchProductUseCase, SearchProductUseCase>();
             services.AddTransient<IViewProductUseCase, ViewProductUseCase>();
