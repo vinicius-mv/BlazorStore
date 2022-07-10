@@ -20,6 +20,7 @@ using BlazorStore.UseCases.PluginsInterfaces.StateStore;
 using BlazorStore.StateStore.DI;
 using BlazorStore.CoreBusiness.Services.Interfaces;
 using BlazorStore.CoreBusiness.Services;
+using BlazorStore.UseCases.OrderConfirmationScreen;
 
 namespace BlazorStore.Web
 {
@@ -56,6 +57,7 @@ namespace BlazorStore.Web
             services.AddTransient<IDeleteProductUseCase, DeleteProductUseCase>();
             services.AddTransient<IUpdateQuantityUseCase, UpdateQuantityUseCase>();
             services.AddTransient<IPlaceOrderUseCase, PlaceOrderUseCase>();
+            services.AddTransient<IViewOrderConfirmationUseCase, ViewOrderConfirmationUseCase>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
