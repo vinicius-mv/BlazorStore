@@ -6,24 +6,24 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlazorStore.UseCases.ShoppingCartScreen
+namespace BlazorStore.UseCases.CustomerPortal.ShoppingCartScreen
 {
-    public class DeleteProductUseCase : IDeleteProductUseCase
+    public class UpdateQuantityUseCase : IUpdateQuantityUseCase
     {
         private readonly IShoppingCart shoppingCart;
 
         private readonly IShoppingCartStateStore shoppingCartStateStore;
 
-        public DeleteProductUseCase(IShoppingCart shoppingCart, IShoppingCartStateStore shoppingCartStateStore)
+        public UpdateQuantityUseCase(IShoppingCart shoppingCart, IShoppingCartStateStore shoppingCartStateStore)
         {
             this.shoppingCart = shoppingCart;
             this.shoppingCartStateStore = shoppingCartStateStore;
         }
 
-        public async Task<Order> ExecuteAsync(int productId)
+        public async Task<Order> Execute(int productId, int quantity)
         {
-            var order = await this.shoppingCart.DeleteProductAsync(productId);
-            this.shoppingCartStateStore.UpdateLineItemsCount();
+            var order = await shoppingCart.UpdateQuantityAsync(productId, quantity);
+            shoppingCartStateStore.UpdateProductQuantity();
 
             return order;
         }

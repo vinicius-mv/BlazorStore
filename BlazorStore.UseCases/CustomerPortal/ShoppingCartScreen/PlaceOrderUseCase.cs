@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlazorStore.UseCases.ShoppingCartScreen
+namespace BlazorStore.UseCases.CustomerPortal.ShoppingCartScreen
 {
     public class PlaceOrderUseCase : IPlaceOrderUseCase
     {

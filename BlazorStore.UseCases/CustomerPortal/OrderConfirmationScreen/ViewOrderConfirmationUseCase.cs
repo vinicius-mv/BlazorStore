@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BlazorStore.UseCases.OrderConfirmationScreen
+namespace BlazorStore.UseCases.CustomerPortal.OrderConfirmationScreen
 {
     public class ViewOrderConfirmationUseCase : IViewOrderConfirmationUseCase
     {

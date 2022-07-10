@@ -3,7 +3,7 @@ using BlazorStore.UseCases.PluginsInterfaces.DataStore;
 using System;
 using System.Collections.Generic;
 
-namespace BlazorStore.UseCases.SearchProductScreen
+namespace BlazorStore.UseCases.CustomerPortal.SearchProductScreen
 {
     public class SearchProductUseCase : ISearchProductUseCase
     {

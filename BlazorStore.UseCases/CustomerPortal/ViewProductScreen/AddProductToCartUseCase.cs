@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BlazorStore.UseCases.ViewProductScreen
+namespace BlazorStore.UseCases.CustomerPortal.ViewProductScreen
 {
     public class AddProductToCartUseCase : IAddProductToCartUseCase
     {

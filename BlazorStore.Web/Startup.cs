@@ -12,15 +12,15 @@ using Microsoft.Extensions.Hosting;
 using BlazorStore.Web.Data;
 using BlazorStore.UseCases.PluginsInterfaces.DataStore;
 using BlazorStore.DataStore.HardCoded;
-using BlazorStore.UseCases.SearchProductScreen;
-using BlazorStore.UseCases.ViewProductScreen;
+using BlazorStore.UseCases.CustomerPortal.SearchProductScreen;
+using BlazorStore.UseCases.CustomerPortal.ViewProductScreen;
 using BlazorStore.UseCases.PluginsInterfaces.UI;
-using BlazorStore.UseCases.ShoppingCartScreen;
+using BlazorStore.UseCases.CustomerPortal.ShoppingCartScreen;
 using BlazorStore.UseCases.PluginsInterfaces.StateStore;
 using BlazorStore.StateStore.DI;
 using BlazorStore.CoreBusiness.Services.Interfaces;
 using BlazorStore.CoreBusiness.Services;
-using BlazorStore.UseCases.OrderConfirmationScreen;
+using BlazorStore.UseCases.CustomerPortal.OrderConfirmationScreen;
 
 namespace BlazorStore.Web
 {

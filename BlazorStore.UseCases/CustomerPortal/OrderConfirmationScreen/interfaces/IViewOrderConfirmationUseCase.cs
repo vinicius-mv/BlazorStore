@@ -1,6 +1,6 @@
 ﻿using BlazorStore.CoreBusiness.Models;
 
-namespace BlazorStore.UseCases.OrderConfirmationScreen
+namespace BlazorStore.UseCases.CustomerPortal.OrderConfirmationScreen
 {
     public interface IViewOrderConfirmationUseCase
     {

@@ -1,6 +1,6 @@
 ﻿using BlazorStore.CoreBusiness.Models;
 
-namespace BlazorStore.UseCases.ViewProductScreen
+namespace BlazorStore.UseCases.CustomerPortal.ViewProductScreen
 {
     public interface IViewProductUseCase
     {

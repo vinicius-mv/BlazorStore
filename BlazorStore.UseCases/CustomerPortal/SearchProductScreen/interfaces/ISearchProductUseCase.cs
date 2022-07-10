@@ -1,7 +1,7 @@
 ﻿using BlazorStore.CoreBusiness.Models;
 using System.Collections.Generic;
 
-namespace BlazorStore.UseCases.SearchProductScreen
+namespace BlazorStore.UseCases.CustomerPortal.SearchProductScreen
 {
     public interface ISearchProductUseCase
     {
