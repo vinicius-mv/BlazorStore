@@ -43,7 +43,7 @@ namespace BlazorStore.Web
         {
             services.AddControllers();
             services.AddAuthentication(WebConstants.Cookies.AuthenticationScheme)
-                .AddCookie("BlazorStore.CookieAuth", config =>
+                .AddCookie(WebConstants.Cookies.AuthenticationScheme, config =>
                 {
                     config.Cookie.Name = WebConstants.Cookies.AuthenticationScheme;
                     config.LoginPath = "/authenticate";

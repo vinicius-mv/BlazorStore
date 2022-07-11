@@ -9,7 +9,7 @@ namespace BlazorStore.Web.Controllers
     public class AuthenticationController : Controller
     {
         [Route("/authenticate")]
-        public IActionResult Authenticate([FromQuery] string user, [FromQuery] string pwd)
+        public async Task<IActionResult> Authenticate([FromQuery] string user, [FromQuery] string pwd)
         {
             if (user == "admin" && pwd == "adminadmin")
             {
@@ -23,7 +23,7 @@ namespace BlazorStore.Web.Controllers
                 var userIdentity = new ClaimsIdentity(userClaims, WebConstants.Cookies.AuthenticationScheme);
                 var userPrincipal = new ClaimsPrincipal(userIdentity);
 
-                HttpContext.SignInAsync(WebConstants.Cookies.AuthenticationScheme, userPrincipal);
+                await HttpContext.SignInAsync(WebConstants.Cookies.AuthenticationScheme, userPrincipal);
             }
 
             return Redirect("/outstandingorders");

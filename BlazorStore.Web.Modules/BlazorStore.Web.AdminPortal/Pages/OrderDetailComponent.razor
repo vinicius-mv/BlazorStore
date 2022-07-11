@@ -1,5 +1,7 @@
 ﻿@page "/orderdetail/{id:int}"
 
+@attribute [Authorize]
+
 @inject NavigationManager navigationManager
 
 @inject IViewOrderDetailUseCase viewOrderDetailUseCase

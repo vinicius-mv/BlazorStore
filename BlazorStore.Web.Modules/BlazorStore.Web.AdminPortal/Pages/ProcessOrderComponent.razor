@@ -1,5 +1,7 @@
 ﻿@page "/processedorders"
 
+@attribute [Authorize]
+
 @inject IViewProcessedOrdersScreenUseCase viewProcessedOrdersScreenUseCase
 
 <h3>Processed Orders</h3>
