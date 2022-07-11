@@ -24,6 +24,7 @@ using BlazorStore.UseCases.CustomerPortal.OrderConfirmationScreen;
 using BlazorStore.UseCases.AdminPortal.OutstandingOrdersScreen;
 using BlazorStore.UseCases.AdminPortal.OrderDetailsScreen;
 using BlazorStore.UseCases.AdminPortal.ProcessedOrdersScreen;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace BlazorStore.Web
 {
@@ -41,10 +42,10 @@ namespace BlazorStore.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddAuthentication("BlazorStore.CookieAuth")
+            services.AddAuthentication(WebConstants.Cookies.AuthenticationScheme)
                 .AddCookie("BlazorStore.CookieAuth", config =>
                 {
-                    config.Cookie.Name = "BlazorStore.CookieAuth";
+                    config.Cookie.Name = WebConstants.Cookies.AuthenticationScheme;
                     config.LoginPath = "/authenticate";
                 });
 
