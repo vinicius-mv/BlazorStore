@@ -11,4 +11,11 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.1.26" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BlazorStore.CoreBusiness\BlazorStore.CoreBusiness.csproj" />
+    <ProjectReference Include="..\..\BlazorStore.UseCases\BlazorStore.UseCases.csproj" />
+    <ProjectReference Include="..\BlazorStore.Web.Common\BlazorStore.Web.Common.csproj" />
+  </ItemGroup>
+
 </Project>

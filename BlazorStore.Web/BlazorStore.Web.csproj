@@ -7,6 +7,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BlazorStore.CoreBusiness\BlazorStore.CoreBusiness.csproj" />
     <ProjectReference Include="..\BlazorStore.UseCases\BlazorStore.UseCases.csproj" />
+    <ProjectReference Include="..\BlazorStore.Web.Modules\BlazorStore.Web.AdminPortal\BlazorStore.Web.AdminPortal.csproj" />
     <ProjectReference Include="..\BlazorStore.Web.Modules\BlazorStore.Web.Common\BlazorStore.Web.Common.csproj" />
     <ProjectReference Include="..\BlazorStore.Web.Modules\BlazorStore.Web.CustomerPortal\BlazorStore.Web.CustomerPortal.csproj" />
     <ProjectReference Include="..\Plugins\BlazorStore.DataStore.HardCoded\BlazorStore.DataStore.HardCoded.csproj" />

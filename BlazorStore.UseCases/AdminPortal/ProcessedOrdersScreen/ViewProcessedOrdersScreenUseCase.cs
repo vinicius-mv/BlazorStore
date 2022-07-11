@@ -6,7 +6,7 @@ using System.Text;
 
 namespace BlazorStore.UseCases.AdminPortal.ProcessedOrdersScreen
 {
-    public class ViewProcessedOrdersScreenUseCase
+    public class ViewProcessedOrdersScreenUseCase : IViewProcessedOrdersScreenUseCase
     {
         private readonly IOrderRepository orderRepository;
 
