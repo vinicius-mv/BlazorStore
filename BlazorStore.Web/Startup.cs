@@ -40,6 +40,14 @@ namespace BlazorStore.Web
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
+            services.AddAuthentication("BlazorStore.CookieAuth")
+                .AddCookie("BlazorStore.CookieAuth", config =>
+                {
+                    config.Cookie.Name = "BlazorStore.CookieAuth";
+                    config.LoginPath = "/authenticate";
+                });
+
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
@@ -87,8 +95,13 @@ namespace BlazorStore.Web
 
             app.UseRouting();
 
+            app.UseAuthentication();
+            app.UseAuthorization();
+
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllers();
+
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/_Host");
             });
