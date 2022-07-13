@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorStore.ShoppingCart.Lo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorStore.StateStore.DI", "Plugins\BlazorStore.StateStore.DI\BlazorStore.StateStore.DI.csproj", "{3146AED4-3AB9-4CCC-B3DC-3C43B2BC781B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorStore.DataStore.SQL.Dapper", "Plugins\BlazorStore.DataStore.SQL.Dapper\BlazorStore.DataStore.SQL.Dapper.csproj", "{675BB9B6-17F6-4A11-A82C-1A6F1FE7B4EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{3146AED4-3AB9-4CCC-B3DC-3C43B2BC781B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3146AED4-3AB9-4CCC-B3DC-3C43B2BC781B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3146AED4-3AB9-4CCC-B3DC-3C43B2BC781B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{675BB9B6-17F6-4A11-A82C-1A6F1FE7B4EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{675BB9B6-17F6-4A11-A82C-1A6F1FE7B4EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{675BB9B6-17F6-4A11-A82C-1A6F1FE7B4EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{675BB9B6-17F6-4A11-A82C-1A6F1FE7B4EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,6 +84,7 @@ Global
 		{26AA3890-9857-4A4D-9855-AC0C3DDE5E08} = {8BFAA383-2B7F-4592-9F83-5064C92DC4ED}
 		{73229092-9639-4D54-BDDD-648F974BE9FA} = {DB9BEAEF-9CF6-4914-BA5C-69634EDFCEFF}
 		{3146AED4-3AB9-4CCC-B3DC-3C43B2BC781B} = {DB9BEAEF-9CF6-4914-BA5C-69634EDFCEFF}
+		{675BB9B6-17F6-4A11-A82C-1A6F1FE7B4EA} = {DB9BEAEF-9CF6-4914-BA5C-69634EDFCEFF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {74C73931-6CB6-49E3-98BA-704BF0E165CA}
