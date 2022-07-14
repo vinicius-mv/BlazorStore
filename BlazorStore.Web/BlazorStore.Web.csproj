@@ -10,7 +10,7 @@
     <ProjectReference Include="..\BlazorStore.Web.Modules\BlazorStore.Web.AdminPortal\BlazorStore.Web.AdminPortal.csproj" />
     <ProjectReference Include="..\BlazorStore.Web.Modules\BlazorStore.Web.Common\BlazorStore.Web.Common.csproj" />
     <ProjectReference Include="..\BlazorStore.Web.Modules\BlazorStore.Web.CustomerPortal\BlazorStore.Web.CustomerPortal.csproj" />
-    <ProjectReference Include="..\Plugins\BlazorStore.DataStore.HardCoded\BlazorStore.DataStore.HardCoded.csproj" />
+    <ProjectReference Include="..\Plugins\BlazorStore.DataStore.SQL.Dapper\BlazorStore.DataStore.SQL.Dapper.csproj" />
     <ProjectReference Include="..\Plugins\BlazorStore.ShoppingCart.LocalStorage\BlazorStore.ShoppingCart.LocalStorage.csproj" />
     <ProjectReference Include="..\Plugins\BlazorStore.StateStore.DI\BlazorStore.StateStore.DI.csproj" />
   </ItemGroup>

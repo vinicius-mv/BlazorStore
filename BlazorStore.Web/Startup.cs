@@ -11,7 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using BlazorStore.Web.Data;
 using BlazorStore.UseCases.PluginsInterfaces.DataStore;
-using BlazorStore.DataStore.HardCoded;
+//using BlazorStore.DataStore.HardCoded;
+using BlazorStore.DataStore.SQL.Dapper;
 using BlazorStore.UseCases.CustomerPortal.SearchProductScreen;
 using BlazorStore.UseCases.CustomerPortal.ViewProductScreen;
 using BlazorStore.UseCases.PluginsInterfaces.UI;
@@ -25,6 +26,7 @@ using BlazorStore.UseCases.AdminPortal.OutstandingOrdersScreen;
 using BlazorStore.UseCases.AdminPortal.OrderDetailsScreen;
 using BlazorStore.UseCases.AdminPortal.ProcessedOrdersScreen;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using BlazorStore.DataStore.SQL.Dapper.Helpers;
 
 namespace BlazorStore.Web
 {
@@ -53,12 +55,12 @@ namespace BlazorStore.Web
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
 
-            // in-mem database (singleton)
-            services.AddSingleton<IProductRepository, ProductRepository>();
-            services.AddSingleton<IOrderRepository, OrderRepository>();
-
             services.AddScoped<IShoppingCart, ShoppingCart.LocalStorage.ShoppingCart>();
             services.AddScoped<IShoppingCartStateStore, ShoppingCartStateStore>();
+
+            services.AddTransient<IDataAccess>(sp => new DataAccess(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddTransient<IProductRepository, ProductRepository>();
+            services.AddTransient<IOrderRepository, OrderRepository>();
 
             services.AddTransient<IOrderService, OrderService>();
 
