@@ -7,7 +7,7 @@ using System.Text;
 
 namespace BlazorStore.DataStore.SQL.Dapper.Helpers
 {
-    public class DataAccess
+    public class DataAccess : IDataAccess
     {
         private readonly string connectionString;
 
@@ -18,7 +18,7 @@ namespace BlazorStore.DataStore.SQL.Dapper.Helpers
 
         public T QuerySingle<T, U>(string sql, U parameters)
         {
-            using(IDbConnection conn = new SqlConnection(connectionString))
+            using (IDbConnection conn = new SqlConnection(connectionString))
             {
                 return conn.QuerySingle<T>(sql, parameters);
             }
